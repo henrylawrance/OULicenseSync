@@ -1,0 +1,57 @@
+[
+    {
+        "type" : "Faculty-Staff",
+        "present":  [
+            "Domain:STANDARDWOFFPACK_FACULTY",
+            "Domain:OFFICESUBSCRIPTION_FACULTY",
+            "Domain:POWER_BI_STANDARD"
+                    ],
+        "absent":  
+                    [
+            "Domain:STANDARDWOFFPACK_STUDENT",
+            "Domain:OFFICESUBSCRIPTION_STUDENT",
+            "Domain:EXCHANGE_STANDARD_ALUMNI"
+                    ]
+    },
+    {
+        "type": "Students",
+        "present": [
+            "Domain:STANDARDWOFFPACK_STUDENT",
+            "Domain:OFFICESUBSCRIPTION_STUDENT",
+            "Domain:POWER_BI_STANDARD"
+        ],
+        "absent": [
+            "Domain:STANDARDWOFFPACK_FACULTY",
+            "Domain:OFFICESUBSCRIPTION_FACULTY",
+            "Domain:EXCHANGE_STANDARD_ALUMNI"
+        ]
+    },
+    {
+        "type": "Alumni",
+        "present": [
+            "Domain:EXCHANGE_STANDARD_ALUMNI",
+            "Domain:POWER_BI_STANDARD"
+        ],
+        "absent": [
+            "Domain:STANDARDWOFFPACK_STUDENT",
+            "Domain:OFFICESUBSCRIPTION_STUDENT",
+            "Domain:STANDARDWOFFPACK_FACULTY",
+            "Domain:OFFICESUBSCRIPTION_FACULTY"
+            
+        ]
+    },
+    {
+        "type": "Other",
+        "present": [
+            "Domain:EXCHANGE_STANDARD_ALUMNI",
+            "Domain:POWER_BI_STANDARD"
+        ],
+        "absent": [
+            "Domain:STANDARDWOFFPACK_STUDENT",
+            "Domain:OFFICESUBSCRIPTION_STUDENT",
+            "Domain:STANDARDWOFFPACK_FACULTY",
+            "Domain:OFFICESUBSCRIPTION_FACULTY"
+        ]
+    }
+]
+
