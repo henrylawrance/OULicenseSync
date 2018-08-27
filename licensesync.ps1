@@ -33,7 +33,6 @@ ForEach ($user in $ADAccounts) {
         $remLicense | ForEach-Object {     
             Write-Verbose "Remove: $_ User: $($user.UserPrincipalName)"
             Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -RemoveLicenses $_
-            "Set-MsolUserLicense -UserPrincipalName $($user.UserPrincipalName) -AddLicenses $_" | out-file -enc ascii undo_removes.txt -Append 
         }
     }
     
@@ -45,7 +44,6 @@ ForEach ($user in $ADAccounts) {
             if ((Get-RemainingLicenses -SkuId $_) -gt 0) {
                 Write-Verbose "Add: $_ User: $($user.UserPrincipalName)"
                 Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -AddLicenses $_
-                "Set-MsolUserLicense -UserPrincipalName $($user.UserPrincipalName) -RemoveLicenses $_" | out-file -enc ascii undo_additions.txt -Append
             }
             else {
                 Write-Warning "!!! Out of license $_ !!!"
